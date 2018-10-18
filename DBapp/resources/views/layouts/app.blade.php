@@ -54,9 +54,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
+                            </li> -->
 
                         @else
                             <li class="nav-item dropdown">
@@ -70,14 +70,14 @@
                                     </a>
 
                                     @if(isset($admin_granted) && $admin_granted ==1)
-                                    <a class="dropdown-item" href='/sysadmin'>
+                                    <!-- <a class="dropdown-item" href='/sysadmin'>
                                       {{__('Manage users')}}
-                                    </a>
+                                    </a> -->
                                     @endif
 
-                                    <a class="dropdown-item" href="/admin">
+                                    <!-- <a class="dropdown-item" href="/admin">
                                       {{ __('Admin Dashboard') }}
-                                    </a>
+                                    </a> -->
 
                                     <a class="dropdown-item" href="/filemanager">
                                       {{ __('File Manager') }}

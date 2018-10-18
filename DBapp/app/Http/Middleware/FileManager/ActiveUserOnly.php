@@ -16,8 +16,10 @@ class ActiveUserOnly
     {
         $sysRole = $req->user()->id;
         $reqID = ($req->route()->parameter('base_path'));
-
-        if ($sysRole == $reqID)
+        $sysRole = (string)$sysRole;
+        $reqID = (string)$reqID;
+        // die(var_dump($reqID));
+        if ($sysRole == $reqID || $reqID=='shares')
           return $next($req);
         return redirect('/home');
     }

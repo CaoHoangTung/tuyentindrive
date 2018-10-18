@@ -80,8 +80,8 @@ return [
     // If true, the uploading file's size will be verified for over than max_image_size/max_file_size.
     'should_validate_size' => false,
 
-    'max_image_size' => 50000,
-    'max_file_size' => 50000,
+    'max_image_size' => 500000,
+    'max_file_size' => 500000,
 
     // If true, the uploading file's mime type will be valid in valid_image_mimetypes/valid_file_mimetypes.
     'should_validate_mime' => false,
@@ -93,6 +93,7 @@ return [
         'image/png',
         'image/gif',
         'image/svg+xml',
+
     ],
 
     // If true, image thumbnails would be created during upload
@@ -123,6 +124,8 @@ return [
         'image/gif',
         'image/svg+xml',
         'application/pdf',
+        'application/zip',
+        'application/rar',
         'text/plain',
     ],
 
@@ -148,6 +151,7 @@ return [
         'xls'  => 'Microsoft Excel',
         'xlsx' => 'Microsoft Excel',
         'zip'  => 'Archive',
+        'rar'  => 'Archive',
         'gif'  => 'GIF Image',
         'jpg'  => 'JPEG Image',
         'jpeg' => 'JPEG Image',
@@ -163,6 +167,7 @@ return [
         'xls'  => 'fa-file-excel-o',
         'xlsx' => 'fa-file-excel-o',
         'zip'  => 'fa-file-archive-o',
+        'rar'  => 'fa-file-archive-o',
         'gif'  => 'fa-file-image-o',
         'jpg'  => 'fa-file-image-o',
         'jpeg' => 'fa-file-image-o',

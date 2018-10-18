@@ -29,6 +29,7 @@ class SettingsController extends Controller
     // get info from user id
     private function getInfo($uid){
       $result = DB::table('users')->where('id',$uid)->get()->toArray();
+      // die(var_dump($uid));
       return $result[0];
     }
 
@@ -242,6 +243,7 @@ class SettingsController extends Controller
     // enable 2fa
     private function customEnable2fa(Request $req){
       $id = $req->id;
+      // die(var_dump($req->id));
       $admin_granted = Auth::user()->admin_granted;
       // if user change his/her own 2fa
       if ($id == Auth::user()->id || Auth::user()->admin_granted==1){
@@ -251,7 +253,7 @@ class SettingsController extends Controller
         $google2fa = app('pragmarx.google2fa');
         $google2fa_secret = $google2fa->generateSecretKey();
 
-        $email = $user[0]->email;
+        $email = $user->email;
 
         // Generate the QR image. This is the image the user will scan with their app
      // to set up two factor authentication

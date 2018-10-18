@@ -15,7 +15,7 @@
                     @endif
 
                     You are logged in!<br>
-                    <a href='/admin'>Go to Admin Dashboard</a>
+                    <a href='/filemanager'>My drive</a>
                 </div>
             </div>
         </div>

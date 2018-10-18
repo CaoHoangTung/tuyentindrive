@@ -69,3 +69,7 @@ Route::post('/2fa','Auth\twofactorsController@AuthLogin')->name('2fa')->middlewa
 Route::get('/files/edit/{id}/{filename?}','FileController@index')->name('editFile');
 
 // Route::get('/filemanager/files/{id}/{filename}','RedirectController@getImage')->middleware('sysadmin');
+
+Route::get('/403',function(){
+  echo "YOU ARE NOT AUTHORISED TO DO THIS ACTION";
+});
